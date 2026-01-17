@@ -1,0 +1,122 @@
+# For LOCAL development with real files
+local_backend: true
+
+# For PRODUCTION (Netlify)
+backend:
+  name: git-gateway
+  branch: develop
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "cv"
+    label: "CV Content"
+    files:
+      - label: "Personal Info & CV Data"
+        name: "data"
+        file: "api/data.json"
+        fields:
+          # Personal Information
+          - label: "Personal Information"
+            name: "personalInfo"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Profile Image",
+                  name: "profileImage",
+                  widget: "image",
+                }
+              - label: "Details"
+                name: "details"
+                widget: "object"
+                fields:
+                  - { label: "Date of Birth", name: "dob", widget: "string" }
+                  - { label: "Gender", name: "gender", widget: "string" }
+                  - { label: "Phone", name: "phone", widget: "string" }
+                  - { label: "Email", name: "email", widget: "string" }
+                  - { label: "Website", name: "website", widget: "string" }
+                  - { label: "Address", name: "address", widget: "string" }
+
+          # Objective
+          - label: "Objective"
+            name: "objective"
+            widget: "list"
+            field: { label: "Statement", name: "statement", widget: "text" }
+
+          # Education
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - { label: "Period", name: "period", widget: "string" }
+              - { label: "Institution", name: "institution", widget: "string" }
+              - { label: "Major", name: "major", widget: "string" }
+              - { label: "GPA", name: "gpa", widget: "string" }
+
+          # Work Experience
+          - label: "Work Experience"
+            name: "workExperience"
+            widget: "list"
+            fields:
+              - { label: "Period", name: "period", widget: "string" }
+              - { label: "Company", name: "company", widget: "string" }
+              - { label: "Position", name: "position", widget: "string" }
+              - label: "Responsibilities"
+                name: "responsibilities"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "text" }
+
+          # Projects
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Period", name: "period", widget: "string" }
+              - { label: "Project Name", name: "name", widget: "string" }
+              - { label: "Position", name: "position", widget: "string" }
+              - label: "Description"
+                name: "description"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "text" }
+              - { label: "Team Size", name: "teamSize", widget: "string" }
+              - label: "Responsibilities"
+                name: "responsibilities"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "text" }
+              - {
+                  label: "Technologies",
+                  name: "technologies",
+                  widget: "string",
+                }
+
+          # Skills
+          - label: "Skills"
+            name: "skills"
+            widget: "object"
+            fields:
+              - label: "Technical Skills"
+                name: "technical"
+                widget: "list"
+                field: { label: "Skill", name: "skill", widget: "string" }
+              - { label: "Soft Skills", name: "soft", widget: "string" }
+              - { label: "Office Skills", name: "office", widget: "string" }
+
+          # Certifications
+          - label: "Certifications"
+            name: "certifications"
+            widget: "list"
+            fields:
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Link",
+                  name: "link",
+                  widget: "string",
+                  required: false,
+                }
+
+          # Interests
+          - { label: "Interests", name: "interests", widget: "string" }
