@@ -1,0 +1,81 @@
+<!-- CV Templates -->
+<template id="header-template">
+  <div class="profile-image">
+    <img data-field="profileImage" alt="" />
+  </div>
+  <div class="header-info">
+    <h1 class="name" data-field="name"></h1>
+    <h2 class="title" data-field="title"></h2>
+    <div class="personal-info" data-list="details"></div>
+  </div>
+</template>
+
+<template id="info-item-template">
+  <div class="info-item">
+    <span class="info-label" data-field="label"></span>
+    <span class="info-value" data-field="value"></span>
+  </div>
+</template>
+
+<template id="section-template">
+  <section class="cv-section">
+    <h3 class="section-title" data-field="title"></h3>
+    <div class="section-content" data-content></div>
+  </section>
+</template>
+
+<template id="list-template">
+  <ul data-list></ul>
+</template>
+
+<template id="timeline-template">
+  <div class="timeline-item">
+    <div class="timeline-date" data-field="period"></div>
+    <div class="timeline-content" data-content></div>
+  </div>
+</template>
+
+<template id="education-content-template">
+  <h4 class="timeline-title" data-field="institution"></h4>
+  <p data-field="major"></p>
+  <p data-field="gpa"></p>
+</template>
+
+<template id="work-content-template">
+  <h4 class="timeline-title" data-field="company"></h4>
+  <p class="job-position" data-field="position"></p>
+  <ul data-list="responsibilities"></ul>
+</template>
+
+<template id="project-content-template">
+  <h4 class="timeline-title" data-field="name"></h4>
+  <p class="job-position" data-field="position"></p>
+  <div class="project-description">
+    <p><strong>Description:</strong></p>
+    <ul data-list="description"></ul>
+    <p><strong>Team size:</strong> <span data-field="teamSize"></span></p>
+    <p><strong>My responsibilities:</strong></p>
+    <ul data-list="responsibilities"></ul>
+    <p>
+      <strong>Technologies used:</strong>
+      <span data-field="technologies"></span>
+    </p>
+  </div>
+</template>
+
+<template id="skill-item-template">
+  <div class="skill-item">
+    <div class="skill-label" data-field="label"></div>
+    <div class="skill-content" data-content></div>
+  </div>
+</template>
+
+<template id="certification-template">
+  <div class="certification-item">
+    <div class="certification-date" data-field="date"></div>
+    <div class="certification-content">
+      <h4 class="certification-title" data-field="title"></h4>
+      <p class="certification-link" data-field="link"></p>
+    </div>
+  </div>
+</template>
