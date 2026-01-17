@@ -1,0 +1,194 @@
+{
+  "personalInfo": {
+    "name": "Nguyen Dang Thanh",
+    "title": "Full-stack Developer",
+    "profileImage": "assets/profile.jpg",
+    "details": {
+      "dob": "June 9, 1999",
+      "gender": "Male",
+      "phone": "034 234 0234",
+      "email": "thanhnd4869@gmail.com",
+      "website": "linkedin.com/in/thanhnd4869",
+      "address": "Hanoi, Vietnam"
+    }
+  },
+  "objective": [
+    "Seeking a Senior Full-stack Developer role to apply 4+ years of experience with JavaScript/TypeScript and modern technologies.",
+    "Ready to contribute to large-scale projects and grow into more advanced software development positions."
+  ],
+  "education": [
+    {
+      "period": "08/2017 - 07/2021",
+      "institution": "University of Information Technology - Vietnam National University, Ho Chi Minh City",
+      "major": "Computer Networks and Communications",
+      "gpa": "GPA: 7.08/10.0"
+    }
+  ],
+  "workExperience": [
+    {
+      "period": "09/2021 - 02/2022",
+      "company": "FPT Software Academy",
+      "position": "Fresher",
+      "responsibilities": [
+        "Worked with HTML, CSS, JavaScript to build and style web pages.",
+        "Learned back-end basics with Node.js, Express.js, and databases (PostgreSQL, MongoDB).",
+        "Assisted in building RESTful APIs and practiced unit/integration testing."
+      ]
+    },
+    {
+      "period": "02/2022 - Present",
+      "company": "FPT Software",
+      "position": "Full-stack Developer",
+      "responsibilities": [
+        "Proficient in HTML, CSS, JavaScript, and TypeScript.",
+        "Experienced in building and developing RESTful APIs, working with Node.js, ReactJS, NestJS, and relational databases such as PostgreSQL and SQL Server.",
+        "Skilled in applying modern architectures, including Back-end for Front-end (BFF) and Micro Front-end Architecture.",
+        "Hands-on experience with development and operation tools such as Git, Docker, GitHub Actions, GitLab CI/CD, Vercel,...",
+        "Strong adaptability to business environments and effective collaboration within cross-functional teams."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "period": "09/2025 - Present",
+      "name": "MIG-25",
+      "position": "Front-end Developer",
+      "description": [
+        "Project at FPT Software.",
+        "Migrate the websites of key organizations in a Southeast Asian country from legacy systems to modern platforms."
+      ],
+      "teamSize": ">50",
+      "responsibilities": [
+        "Communicate with the BA to clarify the requirements before implementing the features.",
+        "Develop new screens based on the design and functionality of legacy screens.",
+        "Write unit tests and fix front-end bugs.",
+        "Collaborate with back-end developers and testers to integrate and validate website functionality."
+      ],
+      "technologies": "Next.js, Directus, Git"
+    },
+    {
+      "period": "03/2025 - 06/2025",
+      "name": "UniCode",
+      "position": "Front-end Developer",
+      "description": [
+        "Project at FPT Software.",
+        "Develop a Chrome Extension to manually configure and inject custom content into FPT's internal web pages.",
+        "Develop a Chrome Extension to manage tools, tasks, notifications, and documents for FPT employees."
+      ],
+      "teamSize": ">20",
+      "responsibilities": [
+        "Communicate with the BA to clarify the requirements before implementing the features.",
+        "Develop new features based on the design and requirements.",
+        "Write unit tests and fix front-end bugs.",
+        "Collaborate with back-end developers and testers to integrate and validate functionality."
+      ],
+      "technologies": "React.js, NestJS, Docker, Git"
+    },
+    {
+      "period": "07/2024 - 02/2025",
+      "name": "Develop & Grow with Browser Compatibility",
+      "position": "Front-end Technical Leader",
+      "description": [
+        "Project at FPT Software.",
+        "Migrate the Human Resource Management System of a Korean economic enterprise from legacy technologies to a modern platform using JavaScript libraries, ensuring cross-browser compatibility on Google Chrome and Microsoft Edge."
+      ],
+      "teamSize": ">20",
+      "responsibilities": [
+        "Lead migration of a legacy HR management system to a modern JavaScript stack.",
+        "Define front-end architecture, coding standards, and best practices for scalability and cross-browser compatibility.",
+        "Collaborate with testers, QA, and stakeholders to align technical solutions with business needs.",
+        "Mentor team members through code reviews, technical discussions, and knowledge sharing.",
+        "Ensure performance optimization, accessibility compliance, and smooth deployment."
+      ],
+      "technologies": "JavaScript, IBSheet, Rclone, SVN"
+    },
+    {
+      "period": "09/2023 - 06/2024",
+      "name": "Global Invoicing - MVP",
+      "position": "Front-end Developer",
+      "description": [
+        "Project at FPT Software.",
+        "Migrate a legacy desktop application for a Japanese client to a modern web application focusing on invoice and document management.",
+        "Integrate the Work Invoice project as a core module of the system to handle invoice and document processes efficiently."
+      ],
+      "teamSize": ">300",
+      "responsibilities": [
+        "Participate in building UI for new screens.",
+        "Unit test, Integration test.",
+        "Create documentation for end users.",
+        "Fix and analyze UI bugs.",
+        "Create a tool based on micro front-end architecture to increase project development productivity.",
+        "Combine with other projects to deploy using a monorepo approach."
+      ],
+      "technologies": "ReactJS (TypeScript), Atomic Design, Context API, Redux, Git, Monorepo with Lerna & pnpm workspace"
+    },
+    {
+      "period": "05/2023 - 08/2023",
+      "name": "Work Invoice",
+      "position": "Front-end Developer",
+      "description": [
+        "Project at FPT Software.",
+        "Develop and enhance features for a Japanese client's system handling the import and export of tickets and invoices."
+      ],
+      "teamSize": ">100",
+      "responsibilities": [
+        "Create detailed designs.",
+        "Participate in building new screens.",
+        "Build a Visual Studio Code extension that generates detailed designs from source code."
+      ],
+      "technologies": "ReactJS (TypeScript), Atomic Design, Context API, Redux, Git."
+    },
+    {
+      "period": "05/2022 - 04/2023",
+      "name": "TransWorld",
+      "position": "Back-end Developer",
+      "description": [
+        "Project at FPT Software.",
+        "Refactor the back-end source code of a goods import-export project for a Japanese client, ensuring alignment with the basic design specifications provided by the customer."
+      ],
+      "teamSize": ">10",
+      "responsibilities": [
+        "Implement new APIs.",
+        "Unit test, Integration test.",
+        "Create report documents.",
+        "Fix and analyze bugs."
+      ],
+      "technologies": "NestJS, PostgreSQL, Redis, Docker, Git."
+    },
+    {
+      "period": "02/2022 - 06/2022",
+      "name": "Jupiter",
+      "position": "Front-end Developer",
+      "description": [
+        "Project at FPT Software.",
+        "Migrate a legacy desktop application in the financial domain for a Japanese client to a modern web application."
+      ],
+      "teamSize": ">100",
+      "responsibilities": [
+        "Fix and analyze UI bugs.",
+        "Create reporting documents for customers.",
+        "Participate in building new features for the system."
+      ],
+      "technologies": "ReactJS (JavaScript), Redux, Ant Design, Git."
+    }
+  ],
+  "skills": {
+    "technical": [
+      "Languages: HTML, CSS, JavaScript, TypeScript.",
+      "Frameworks/Libraries: Express.js, NestJS, ReactJS, Next.js.",
+      "Databases: SQL Server, PostgreSQL, MongoDB.",
+      "IDE: Visual Studio Code.",
+      "Tools: Docker, Git, Postman, SVN, Jira."
+    ],
+    "soft": "Effective teamwork, good communication, good presentation.",
+    "office": "Word, Excel, PowerPoint."
+  },
+  "certifications": [
+    {
+      "date": "06/2024",
+      "title": "React Certification - Level 1",
+      "link": "interstate21.com/certificate/?code=5F22P7E"
+    }
+  ],
+  "interests": "Games, Soccer"
+}

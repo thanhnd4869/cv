@@ -1,0 +1,221 @@
+/* Header Section */
+.cv-header {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.profile-image {
+  flex-shrink: 0;
+}
+
+.profile-image img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+}
+
+.header-info {
+  flex: 1;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.personal-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.info-item {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.info-label {
+  font-weight: bold;
+  color: var(--info-label-color);
+}
+
+.info-value {
+  color: var(--text-color);
+}
+
+/* Section Styles */
+.cv-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 0;
+  margin-bottom: 20px;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
+
+.section-content {
+  padding-left: 20px;
+}
+
+.section-content ul {
+  list-style-position: outside;
+  padding-left: 20px;
+}
+
+.section-content li {
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* Timeline Items */
+.timeline-item {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.timeline-date {
+  flex-shrink: 0;
+  width: 140px;
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: normal;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.job-position {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.timeline-content p {
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.timeline-content ul {
+  list-style-position: outside;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.timeline-content li {
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+/* Project Description Styles */
+.project-description {
+  margin-top: 10px;
+}
+
+.project-description p {
+  margin-bottom: 5px;
+}
+
+.project-description p strong {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.project-description ul {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* Skills Section Styles */
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skill-item {
+  display: flex;
+  gap: 20px;
+}
+
+.skill-label {
+  flex-shrink: 0;
+  width: 140px;
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.skill-content {
+  flex: 1;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.skill-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.skill-content li {
+  margin-bottom: 5px;
+}
+
+/* Certifications Section Styles */
+.certification-item {
+  display: flex;
+  gap: 30px;
+}
+
+.certification-date {
+  flex-shrink: 0;
+  width: 140px;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.certification-content {
+  flex: 1;
+}
+
+.certification-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.certification-link {
+  font-size: 14px;
+  color: var(--text-color);
+  margin: 0;
+}

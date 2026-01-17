@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyen Dang Thanh - CV</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <img src="assets/icons/sun.svg" alt="Light mode" class="sun-icon" />
+      <img src="assets/icons/moon.svg" alt="Dark mode" class="moon-icon" />
+    </button>
+
+    <div class="cv-container">
+      <!-- All content will be dynamically rendered from data.json -->
+      <header class="cv-header"></header>
+    </div>
+
+    <!-- Templates will be loaded here -->
+    <div id="templates-container" style="display: none"></div>
+
+    <!-- Scripts -->
+    <script src="js/renderer.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
