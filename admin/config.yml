@@ -1,10 +1,12 @@
-# For LOCAL development with real files
-local_backend: true
-
-# For PRODUCTION (Netlify)
+# For LOCAL/TESTING - works immediately without authentication
 backend:
-  name: git-gateway
-  branch: develop
+  name: test-repo
+
+# For PRODUCTION (Netlify) - uncomment when email confirmation works:
+# backend:
+#   name: git-gateway
+#   branch: develop
+# local_backend: true
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
