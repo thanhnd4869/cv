@@ -1,20 +1,20 @@
 # CV Project
 
-Online CV website với Netlify CMS để quản lý nội dung.
+Online CV website với Decap CMS để quản lý nội dung.
 
 ## 🚀 Tính năng
 
 - Website CV thuần HTML, CSS, JavaScript
-- Quản lý nội dung qua Netlify CMS
+- Quản lý nội dung qua Decap CMS
 - Hỗ trợ 2 môi trường:
   - **Development**: Chỉnh sửa file local trực tiếp
-  - **Production**: Tự động commit và push lên Git
+  - **Production**: Tự động commit và push lên Git qua GitHub OAuth
 
 ## 📁 Cấu trúc dự án
 
 ```
 .
-├── admin/                  # Netlify CMS
+├── admin/                  # Decap CMS
 │   ├── index.html         # Admin UI
 │   └── config.yml         # CMS configuration
 ├── api/
@@ -25,7 +25,7 @@ Online CV website với Netlify CMS để quản lý nội dung.
 └── index.html             # Trang chủ
 ```
 
-## 🛠️ Sử dụng Netlify CMS
+## 🛠️ Sử dụng Decap CMS
 
 ### Development (Local)
 
@@ -41,33 +41,51 @@ Online CV website với Netlify CMS để quản lý nội dung.
    # Terminal 1: HTTP Server
    npx http-server -p 8080 -c-1
 
-   # Terminal 2: CMS Proxy Server
-   npx netlify-cms-proxy-server
+   # Terminal 2: Decap Server
+   npx decap-server
    ```
 
 3. **Truy cập CMS**: http://localhost:8080/admin
 
 4. **Chỉnh sửa**: Mọi thay đổi sẽ được lưu trực tiếp vào file `api/data.json` trên local
 
-### Production (Netlify)
+### Production (GitHub OAuth)
 
-1. **Deploy lên Netlify**:
-   - Connect repository với Netlify
-   - Deploy tự động từ branch `main`
+**Bước 1: Cập nhật config.yml**
 
-2. **Enable Netlify Identity**:
-   - Vào Netlify Dashboard → Site settings → Identity
-   - Click "Enable Identity"
-   - Settings → Registration preferences → "Invite only"
-   - Services → Git Gateway → Enable
+- Mở [admin/config.yml](admin/config.yml)
+- Sửa `repo: your-username/cv` thành repo của bạn (ví dụ: `thanhnd4869/cv`)
 
-3. **Thêm user**:
-   - Identity tab → Invite users
-   - User sẽ nhận email để set password
+**Bước 2: Tạo GitHub OAuth App**
 
-4. **Truy cập CMS**: https://your-site.netlify.app/admin
-   - Đăng nhập bằng Netlify Identity
-   - Mọi thay đổi sẽ tự động commit và push lên Git
+1. Vào GitHub Settings → Developer settings → OAuth Apps → New OAuth App
+2. Điền thông tin:
+   - **Application name**: CV Admin
+   - **Homepage URL**: `https://your-site.netlify.app`
+   - **Authorization callback URL**: `https://api.netlify.com/auth/done`
+3. Lưu lại **Client ID** và **Client Secret**
+
+**Bước 3: Cấu hình trên Netlify**
+
+1. Vào Netlify Dashboard → Site settings → Access control → OAuth
+2. Click "Install provider" → chọn GitHub
+3. Nhập **Client ID** và **Client Secret** từ bước 2
+4. Save
+
+**Bước 4: Sử dụng CMS**
+
+- Truy cập: https://your-site.netlify.app/admin
+- Click "Login with GitHub"
+- Authorize ứng dụng
+- Mọi thay đổi sẽ tự động commit và push lên GitHub!
+
+### Alternative: Self-hosted (không cần Netlify)
+
+Nếu không deploy trên Netlify, bạn có thể tự host OAuth server hoặc dùng các service như:
+
+- [netlify-cms-github-oauth-provider](https://github.com/vencax/netlify-cms-github-oauth-provider)
+- Cloudflare Workers
+- Vercel Serverless Functions
 
 ## 📝 Quản lý nội dung
 
@@ -84,12 +102,13 @@ CMS cho phép chỉnh sửa:
 
 ## ⚙️ Yêu cầu
 
-- **Node.js** (để chạy npx commands)
+- **Node.js** (để chạy npx commands trong development)
 - Không cần cài đặt package nào (sử dụng npx trực tiếp)
 - Browser hiện đại (Chrome, Firefox, Edge...)
+- **GitHub account** (cho production authentication)
 
 ## 📚 Tài liệu
 
-- [Netlify CMS Docs](https://www.netlifycms.org/docs/)
-- [Netlify Identity](https://docs.netlify.com/visitor-access/identity/)
-- [Git Gateway](https://docs.netlify.com/visitor-access/git-gateway/)
+- [Decap CMS Docs](https://decapcms.org/docs/)
+- [GitHub Backend](https://decapcms.org/docs/github-backend/)
+- [Authentication Backends](https://decapcms.org/docs/authentication-backends/)

@@ -1,8 +1,21 @@
 # Decap CMS Configuration
 # Backend configuration for production and development
+
+# Production: Use GitHub backend (no Netlify Identity needed!)
+# Setup: https://decapcms.org/docs/github-backend/
 backend:
-  name: git-gateway # For production (Netlify Identity + Git Gateway)
-  branch: main # Change this to match your main branch name
+  name: github
+  repo: thanhnd4869/cv
+  branch: develop
+  # Use Netlify as OAuth proxy
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+# Alternative: GitLab backend
+# backend:
+#   name: gitlab
+#   repo: your-username/cv
+#   branch: develop
 
 # Local backend for development
 # Run: npx decap-server
