@@ -1,0 +1,14 @@
+[build]
+  # Thư mục chứa file build (để trống vì đây là static site)
+  publish = "."
+  
+  # Không cần build command vì là static site
+  command = ""
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  # Các biến môi trường nếu cần

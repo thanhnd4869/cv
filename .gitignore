@@ -27,3 +27,6 @@ Desktop.ini
 # Environment variables (if needed in future)
 .env
 .env.local
+
+# Local Netlify folder
+.netlify
