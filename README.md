@@ -1,16 +1,16 @@
 # CV Project
 
-Online CV website với Decap CMS để quản lý nội dung.
+Online CV website with Decap CMS for content management.
 
-## 🚀 Tính năng
+## 🚀 Features
 
-- Website CV thuần HTML, CSS, JavaScript
-- Quản lý nội dung qua Decap CMS
-- Hỗ trợ 2 môi trường:
-  - **Development**: Chỉnh sửa file local trực tiếp
-  - **Production**: Tự động commit và push lên Git qua GitHub OAuth
+- Pure HTML, CSS, JavaScript CV website
+- Content management via Decap CMS
+- Supports 2 environments:
+  - **Development**: Direct local file editing
+  - **Production**: Automatic commit and push to Git via GitHub OAuth
 
-## 📁 Cấu trúc dự án
+## 📁 Project Structure
 
 ```
 .
@@ -18,24 +18,24 @@ Online CV website với Decap CMS để quản lý nội dung.
 │   ├── index.html         # Admin UI
 │   └── config.yml         # CMS configuration
 ├── api/
-│   └── data.json          # Dữ liệu CV (được quản lý bởi CMS)
-├── assets/                # Hình ảnh và media
+│   └── data.json          # CV Data (managed by CMS)
+├── assets/                # Images and media
 ├── css/                   # Stylesheets
 ├── js/                    # JavaScript files
-└── index.html             # Trang chủ
+└── index.html             # Homepage
 ```
 
-## 🛠️ Sử dụng Decap CMS
+## 🛠️ Using Decap CMS
 
 ### Development (Local)
 
-1. **Chạy script tự động** (Windows):
+1. **Run automated script** (Windows):
 
    ```bash
    start-local-cms.bat
    ```
 
-2. **Hoặc chạy thủ công**:
+2. **Or run manually**:
 
    ```bash
    # Terminal 1: HTTP Server
@@ -45,69 +45,69 @@ Online CV website với Decap CMS để quản lý nội dung.
    npx decap-server
    ```
 
-3. **Truy cập CMS**: http://localhost:8080/admin
+3. **Access CMS**: http://localhost:8080/admin
 
-4. **Chỉnh sửa**: Mọi thay đổi sẽ được lưu trực tiếp vào file `api/data.json` trên local
+4. **Edit**: All changes will be saved directly to the `api/data.json` file locally
 
 ### Production (GitHub OAuth)
 
-**Bước 1: Cập nhật config.yml**
+**Step 1: Update config.yml**
 
-- Mở [admin/config.yml](admin/config.yml)
-- Sửa `repo: your-username/cv` thành repo của bạn (ví dụ: `thanhnd4869/cv`)
+- Open [admin/config.yml](admin/config.yml)
+- Change `repo: your-username/cv` to your repository (e.g., `thanhnd4869/cv`)
 
-**Bước 2: Tạo GitHub OAuth App**
+**Step 2: Create GitHub OAuth App**
 
-1. Vào GitHub Settings → Developer settings → OAuth Apps → New OAuth App
-2. Điền thông tin:
+1. Go to GitHub Settings → Developer settings → OAuth Apps → New OAuth App
+2. Fill in the information:
    - **Application name**: CV Admin
    - **Homepage URL**: `https://your-site.netlify.app`
    - **Authorization callback URL**: `https://api.netlify.com/auth/done`
-3. Lưu lại **Client ID** và **Client Secret**
+3. Save the **Client ID** and **Client Secret**
 
-**Bước 3: Cấu hình trên Netlify**
+**Step 3: Configure on Netlify**
 
-1. Vào Netlify Dashboard → Site settings → Access control → OAuth
-2. Click "Install provider" → chọn GitHub
-3. Nhập **Client ID** và **Client Secret** từ bước 2
+1. Go to Netlify Dashboard → Site settings → Access control → OAuth
+2. Click "Install provider" → select GitHub
+3. Enter **Client ID** and **Client Secret** from step 2
 4. Save
 
-**Bước 4: Sử dụng CMS**
+**Step 4: Use CMS**
 
-- Truy cập: https://your-site.netlify.app/admin
+- Access: https://your-site.netlify.app/admin
 - Click "Login with GitHub"
-- Authorize ứng dụng
-- Mọi thay đổi sẽ tự động commit và push lên GitHub!
+- Authorize the application
+- All changes will be automatically committed and pushed to GitHub!
 
-### Alternative: Self-hosted (không cần Netlify)
+### Alternative: Self-hosted (without Netlify)
 
-Nếu không deploy trên Netlify, bạn có thể tự host OAuth server hoặc dùng các service như:
+If you're not deploying on Netlify, you can self-host the OAuth server or use services like:
 
 - [netlify-cms-github-oauth-provider](https://github.com/vencax/netlify-cms-github-oauth-provider)
 - Cloudflare Workers
 - Vercel Serverless Functions
 
-## 📝 Quản lý nội dung
+## 📝 Content Management
 
-CMS cho phép chỉnh sửa:
+CMS allows editing:
 
-- ✅ Personal Information (Thông tin cá nhân)
-- ✅ Objective (Mục tiêu nghề nghiệp)
-- ✅ Education (Học vấn)
-- ✅ Work Experience (Kinh nghiệm làm việc)
-- ✅ Projects (Dự án)
-- ✅ Skills (Kỹ năng)
-- ✅ Certifications (Chứng chỉ)
-- ✅ Interests (Sở thích)
+- ✅ Personal Information
+- ✅ Objective
+- ✅ Education
+- ✅ Work Experience
+- ✅ Projects
+- ✅ Skills
+- ✅ Certifications
+- ✅ Interests
 
-## ⚙️ Yêu cầu
+## ⚙️ Requirements
 
-- **Node.js** (để chạy npx commands trong development)
-- Không cần cài đặt package nào (sử dụng npx trực tiếp)
-- Browser hiện đại (Chrome, Firefox, Edge...)
-- **GitHub account** (cho production authentication)
+- **Node.js** (to run npx commands in development)
+- No packages need to be installed (use npx directly)
+- Modern browser (Chrome, Firefox, Edge...)
+- **GitHub account** (for production authentication)
 
-## 📚 Tài liệu
+## 📚 Documentation
 
 - [Decap CMS Docs](https://decapcms.org/docs/)
 - [GitHub Backend](https://decapcms.org/docs/github-backend/)

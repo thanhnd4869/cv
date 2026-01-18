@@ -1,9 +1,17 @@
 [build]
-  # Thư mục chứa file build (để trống vì đây là static site)
+  # Build output directory (empty for static site)
   publish = "."
   
-  # Không cần build command vì là static site
+  # No build command needed for static site
   command = ""
+
+# Configure CORS headers for API endpoint
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
 
 [[redirects]]
   from = "/*"
@@ -11,4 +19,4 @@
   status = 200
 
 [build.environment]
-  # Các biến môi trường nếu cần
+  # Environment variables if needed
