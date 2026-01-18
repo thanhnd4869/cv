@@ -1,0 +1,143 @@
+# Decap CMS Configuration
+# Backend configuration for production and development
+
+# Production: Use GitHub backend (no Netlify Identity needed!)
+# Setup: https://decapcms.org/docs/github-backend/
+backend:
+  name: github
+  repo: thanhnd4869/cv
+  branch: develop
+  # Use Netlify as OAuth proxy
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+# Alternative: GitLab backend
+# backend:
+#   name: gitlab
+#   repo: your-username/cv
+#   branch: develop
+
+# Local backend for development
+# Run: npx decap-server
+# Then access: http://localhost:8080/admin
+local_backend: true
+
+# Media files configuration
+media_folder: "assets" # Where uploaded files will be saved
+public_folder: "/assets" # The src attribute for media files
+
+# Disable preview panel
+show_preview_links: false
+
+# Collections - map to your data.json structure
+collections:
+  - name: "cv_data"
+    label: "CV Data"
+    editor:
+      preview: false
+    files:
+      # Personal Information
+      - name: "personal_info"
+        label: "Personal Information"
+        file: "api/data.json"
+        fields:
+          - label: "Personal Info"
+            name: "personalInfo"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Profile Image",
+                  name: "profileImage",
+                  widget: "image",
+                  required: false,
+                }
+              - label: "Details"
+                name: "details"
+                widget: "object"
+                fields:
+                  - { label: "Date of Birth", name: "dob", widget: "string" }
+                  - { label: "Gender", name: "gender", widget: "string" }
+                  - { label: "Phone", name: "phone", widget: "string" }
+                  - { label: "Email", name: "email", widget: "string" }
+                  - { label: "Website", name: "website", widget: "string" }
+                  - { label: "Address", name: "address", widget: "string" }
+
+          # Objective
+          - label: "Objective"
+            name: "objective"
+            widget: "list"
+            field: { label: "Statement", name: "statement", widget: "text" }
+
+          # Education
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - { label: "Period", name: "period", widget: "string" }
+              - { label: "Institution", name: "institution", widget: "string" }
+              - { label: "Major", name: "major", widget: "string" }
+              - { label: "GPA", name: "gpa", widget: "string" }
+
+          # Work Experience
+          - label: "Work Experience"
+            name: "workExperience"
+            widget: "list"
+            fields:
+              - { label: "Period", name: "period", widget: "string" }
+              - { label: "Company", name: "company", widget: "string" }
+              - { label: "Position", name: "position", widget: "string" }
+              - label: "Responsibilities"
+                name: "responsibilities"
+                widget: "list"
+                field: { label: "Responsibility", name: "item", widget: "text" }
+
+          # Projects
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Period", name: "period", widget: "string" }
+              - { label: "Project Name", name: "name", widget: "string" }
+              - { label: "Position", name: "position", widget: "string" }
+              - label: "Description"
+                name: "description"
+                widget: "list"
+                field:
+                  { label: "Description Item", name: "item", widget: "text" }
+              - { label: "Team Size", name: "teamSize", widget: "string" }
+              - label: "Responsibilities"
+                name: "responsibilities"
+                widget: "list"
+                field: { label: "Responsibility", name: "item", widget: "text" }
+              - { label: "Technologies", name: "technologies", widget: "text" }
+
+          # Skills
+          - label: "Skills"
+            name: "skills"
+            widget: "object"
+            fields:
+              - label: "Technical Skills"
+                name: "technical"
+                widget: "list"
+                field: { label: "Skill", name: "skill", widget: "string" }
+              - { label: "Soft Skills", name: "soft", widget: "string" }
+              - { label: "Office Skills", name: "office", widget: "string" }
+
+          # Certifications
+          - label: "Certifications"
+            name: "certifications"
+            widget: "list"
+            fields:
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Link",
+                  name: "link",
+                  widget: "string",
+                  required: false,
+                }
+
+          # Interests
+          - { label: "Interests", name: "interests", widget: "string" }
