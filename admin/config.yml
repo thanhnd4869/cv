@@ -6,7 +6,7 @@
 backend:
   name: github
   repo: thanhnd4869/cv
-  branch: develop
+  branch: main
   # Use Netlify as OAuth proxy
   base_url: https://api.netlify.com
   auth_endpoint: auth
